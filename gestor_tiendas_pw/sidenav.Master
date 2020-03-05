@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="sidenav.master.cs" Inherits="gestor_tiendas_pw.sidenav" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="styles/geneic.css" rel="stylesheet" type="text/css">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <asp:Label ID="lblUser" runat="server" class="badge badge-pill badge-info" Text="Algo"></asp:Label>
+                </li>
+                <li class="nav-item out_item">
+                    <asp:Button class="btn btn-secondary" ID="Button2" runat="server" Text="CERRAR SESIÓN" OnClick="Button2_Click" />
+                </li>
+            </ul>
+            <aside id="lado">
+                <div>
+                    <ul class="pl-0 pr-3 pt-3">
+                       <li>
+                           <asp:Button class="btn btn-danger" ID="btn_home" runat="server" Text="INICIO" OnClick="btn_home_Click"/>
+                       </li>
+                        <li class="pt-2">
+                           <asp:Button class="btn btn-danger" ID="btn_empleado" runat="server" Text="EMPLEADOS" OnClick="btn_empleado_Click"/>
+                       </li>
+                   </ul>
+                </div>
+            </aside>
+        </header>
+        <div>
+            <footer>
+                <div class="row justify-content-center">
+                    <div class="cont__footer">
+                        <span class="pr-2 span1">Desarrollado por:</span>
+                        <span class="cont__footer_title">Universidad Distrital Francisco José de Caldas</span>
+                    </div>
+                </div>
+            </footer>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

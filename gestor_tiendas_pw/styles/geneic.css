@@ -1,0 +1,42 @@
+﻿/*Boostrap*/
+@import url('../Content/bootstrap.min.css');
+
+/*all styles*/
+@import url(login.css);
+@import url('master_page.css');
+
+
+body {
+    background-color: #F5F7FF;
+}
+
+.nav {
+    background-color: #54798F;
+    padding: 20px;
+    border:0;
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    padding-top:5px;
+    border: 2px solid;
+    border-radius: 63px;
+}
+
+.btn-danger {
+    border: 0;
+    border-radius: 0;
+    padding-top: 4px;
+    background-color: #BE1202;
+    height: 32px;
+    font-size: 15px;
+}
+
+.badge {
+    font-size: 15px;
+    padding: 6px 15px;
+}
+.badge-info {
+    background-color: #BE1202;
+}

@@ -1,0 +1,28 @@
+﻿/*Pagina maestra*/
+
+.out_item {
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    width: 150px;
+}
+
+aside {
+    height: 90vh;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 16%;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: #6c757d;
+}
+
+.cont__footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.cont__footer_title {
+    font-family: serif;
+}

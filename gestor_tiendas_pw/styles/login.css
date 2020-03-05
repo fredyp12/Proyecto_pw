@@ -1,0 +1,22 @@
+﻿/*Estilos login*/
+.login_txt {
+    margin-top: 30px;
+}
+.label_login {
+    position: absolute;
+}
+
+.store {
+    width: 400px;
+}
+
+.check_login {
+    display: flex;
+    flex-direction: row;
+}
+tbody{
+    display: flex;
+}
+td label{
+    padding-left:10px
+}

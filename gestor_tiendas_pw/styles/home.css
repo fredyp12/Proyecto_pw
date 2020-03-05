@@ -1,0 +1,26 @@
+﻿@import url('geneic.css');
+
+h3 {
+    color: #17a2b8;
+}
+
+.welcome {
+    color: #BE1202;
+    font-size: 30px;
+}
+.welcome_dat {
+    color: #54798F;
+    font-size: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form_des {
+    font-size: 18px;
+    color: #053652f2;
+}
+.disN {
+    display: none;
+}
