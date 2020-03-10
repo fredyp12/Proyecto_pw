@@ -24,3 +24,7 @@ h3 {
 .disN {
     display: none;
 }
+
+.bd {
+    border-bottom: solid 1px #007bff;
+}

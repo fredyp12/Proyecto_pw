@@ -19,23 +19,48 @@ namespace gestor_tiendas_pw
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string pass, radio= "";
+            string pass, radio = "";
             dto.Db baseDato = new Db();
             DataTable tabla = new DataTable();
-            if (radioS.SelectedIndex == 0) radio = "administrador";
-            else if (radioS.SelectedIndex == 1) radio = "empleado";
-            tabla = baseDato.dtTable("SELECT * FROM "+radio+" WHERE \"user\"='" + txtUser.Text + "'");
-            if(tabla.Rows.Count > 0)
+            if (radioS.SelectedIndex == 0)
             {
-                DataRow row = tabla.Rows[0];
-                pass = Convert.ToString(row["pass"]);
-                if (pass == txtPass.Text)
+                radio = "administrador";
+                tabla = baseDato.dtTable("SELECT * FROM " + radio + " WHERE \"user\"='" + txtUser.Text + "'");
+                if (tabla.Rows.Count > 0)
                 {
-                    String nombre, id, user;
-                    nombre = Convert.ToString(row["nombre"]);
-                    id = Convert.ToString(row["id"]);
-                    user = Convert.ToString(row["user"]);
-                    Response.Redirect("homeAdmin.aspx?nombre=" + nombre + "&id=" + id + "&user=" + user + "&pass=" + pass);
+                    DataRow row = tabla.Rows[0];
+                    pass = Convert.ToString(row["pass"]);
+                    if (pass == txtPass.Text)
+                    {
+                        String nombre, id, user;
+                        nombre = Convert.ToString(row["nombre"]);
+                        id = Convert.ToString(row["id"]);
+                        user = Convert.ToString(row["user"]);
+                        Response.Redirect("homeAdmin.aspx?nombre=" + nombre + "&id=" + id + "&user=" + user + "&pass=" + pass);
+                    }
+                }
+            }
+            else
+            {
+                if (radioS.SelectedIndex == 1)
+                {
+                    radio = "empleado";
+                    tabla = baseDato.dtTable("SELECT * FROM " + radio + " WHERE \"user\"='" + txtUser.Text + "'");
+                    if (tabla.Rows.Count > 0)
+                    {
+                        DataRow row = tabla.Rows[0];
+                        pass = Convert.ToString(row["pass"]);
+                        if (pass == txtPass.Text)
+                        {
+                            string nombre, id, user, tienda;
+                            nombre = Convert.ToString(row["nombre"]);
+                            id = Convert.ToString(row["id"]);
+                            user = Convert.ToString(row["user"]);
+                            tienda = Convert.ToString(row["tienda"]);
+                            Response.Redirect("homeEmpleado.aspx?nombre=" + nombre + "&id=" + id + "&user=" + user + "&tienda=" + tienda);
+                        }
+                        
+                    }
                 }
             }
         }

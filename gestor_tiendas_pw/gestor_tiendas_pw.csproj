@@ -80,6 +80,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="homeEmpleado.aspx" />
     <Content Include="img\login.png" />
     <Content Include="login.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -209,6 +210,14 @@
     </Compile>
     <Compile Include="dto\Admin.cs" />
     <Compile Include="dto\Db.cs" />
+    <Compile Include="dto\Empleado.cs" />
+    <Compile Include="homeEmpleado.aspx.cs">
+      <DependentUpon>homeEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homeEmpleado.aspx.designer.cs">
+      <DependentUpon>homeEmpleado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -217,6 +226,13 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sideEmpleado.Master.cs">
+      <DependentUpon>sideEmpleado.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sideEmpleado.Master.designer.cs">
+      <DependentUpon>sideEmpleado.Master</DependentUpon>
+    </Compile>
     <Compile Include="sidenav.Master.cs">
       <DependentUpon>sidenav.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -236,6 +252,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="sideEmpleado.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
