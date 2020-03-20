@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bdd" Class="linkEmpleadoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\bdd.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.empleado" Member="empleado">
+    <Type Name="empleado">
+      <Column Name="Id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[user]" Member="user" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="pass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tienda" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="empleado_tienda" Member="tienda1" ThisKey="tienda" OtherKey="nombre" Type="tienda" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tienda" Member="tienda">
+    <Type Name="tienda">
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="empleado_tienda" Member="empleado" ThisKey="nombre" OtherKey="tienda" Type="empleado" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

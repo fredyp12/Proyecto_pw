@@ -8,6 +8,7 @@
     <title></title>
 </head>
  <link href="styles/geneic.css" rel="stylesheet" type="text/css">
+<link href="styles/login.css" rel="stylesheet" />
 <body>
     <form id="form1" runat="server">
         <div class="container">
@@ -16,13 +17,13 @@
             </div>
             <div class="row justify-content-center">
             <div class="col-6 input-group mb-3 ">
-                <label class="label_login">Usuario</label>
+                <label class="label_group">Usuario</label>
                 <asp:TextBox class="login_txt form-control" ID="txtUser" runat="server"></asp:TextBox>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-6 input-group mb-3">
-                <label class="label_login">Contraseña</label>
+                <label class="label_group">Contraseña</label>
                 <asp:TextBox class="login_txt form-control" ID="txtPass" runat="server"></asp:TextBox>
             </div>
         </div>

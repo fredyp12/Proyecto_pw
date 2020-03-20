@@ -2,7 +2,6 @@
 @import url('../Content/bootstrap.min.css');
 
 /*all styles*/
-@import url(login.css);
 @import url('master_page.css');
 
 
@@ -39,4 +38,13 @@ body {
 }
 .badge-info {
     background-color: #BE1202;
+}
+
+/*Form*/
+.btn_bn{
+    border-radius: 0;
+}
+
+.label_group {
+    position: absolute;
 }

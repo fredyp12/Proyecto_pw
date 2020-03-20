@@ -30,6 +30,12 @@
                         <li class="pt-2">
                            <asp:Button class="btn btn-danger" ID="btn_empleado" runat="server" Text="EMPLEADOS" OnClick="btn_empleado_Click"/>
                        </li>
+                        <li class="pt-2">
+                           <asp:Button class="btn btn-danger" ID="btn_tienda" runat="server" Text="TIENDA" OnClick="btn_tienda_Click" />
+                       </li>
+                        <li class="pt-2">
+                           <asp:Button class="btn btn-danger" ID="btn_inventario" runat="server" Text="Inventario" OnClick="btn_inventario_Click" />
+                       </li>
                    </ul>
                 </div>
             </aside>

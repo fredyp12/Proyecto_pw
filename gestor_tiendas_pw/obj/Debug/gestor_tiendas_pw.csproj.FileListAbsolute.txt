@@ -52,7 +52,7 @@ C:\Users\user\Desktop\trabajos\programacion_web\gestor_tiendas_pw\gestor_tiendas
 C:\Users\user\Desktop\trabajos\programacion_web\gestor_tiendas_pw\gestor_tiendas_pw\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\user\Desktop\trabajos\programacion_web\gestor_tiendas_pw\gestor_tiendas_pw\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\user\Desktop\trabajos\programacion_web\gestor_tiendas_pw\gestor_tiendas_pw\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\user\Desktop\trabajos\programacion_web\gestor_tiendas_pw\gestor_tiendas_pw\obj\Debug\gestor_tiendas_pw.csprojAssemblyReference.cache
 C:\Users\user\Desktop\trabajos\programacion_web\gestor_tiendas_pw\gestor_tiendas_pw\obj\Debug\gestor_tiendas_pw.csproj.CopyComplete
 C:\Users\user\Desktop\trabajos\programacion_web\gestor_tiendas_pw\gestor_tiendas_pw\obj\Debug\gestor_tiendas_pw.dll
 C:\Users\user\Desktop\trabajos\programacion_web\gestor_tiendas_pw\gestor_tiendas_pw\obj\Debug\gestor_tiendas_pw.pdb
+C:\Users\user\Desktop\trabajos\programacion_web\gestor_tiendas_pw\gestor_tiendas_pw\obj\Debug\gestor_tiendas_pw.csprojAssemblyReference.cache
