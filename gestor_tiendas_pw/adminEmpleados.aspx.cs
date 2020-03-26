@@ -44,12 +44,12 @@ namespace gestor_tiendas_pw
 
         protected void btn_update_Click(object sender, EventArgs e)
         {
-            baseDatos.dtUpdate(txt_nombre.Text, "nombre", "empleado", txt_id.Text);
+            baseDatos.dtUpdate("'"+txt_nombre.Text+"'", "nombre", "empleado", txt_id.Text);
             if(baseDatos.dat_exist("SELECT * FROM empleado  WHERE pass='"+txt_pass.Text+"'")==false)
-                baseDatos.dtUpdate(txt_pass.Text, "pass", "empleado", txt_id.Text);
+                baseDatos.dtUpdate("'"+txt_pass.Text+"'", "pass", "empleado", txt_id.Text);
 
             if (baseDatos.dat_exist("SELECT * FROM tienda  WHERE nombre='" + txt_tienda.Text + "'") == true)
-                baseDatos.dtUpdate(txt_tienda.Text, "tienda", "empleado", txt_id.Text);
+                baseDatos.dtUpdate("'"+txt_tienda.Text+"'", "tienda", "empleado", txt_id.Text);
 
             grid_empleado.DataBind();
             clear();

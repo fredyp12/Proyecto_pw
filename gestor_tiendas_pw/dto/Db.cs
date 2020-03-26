@@ -31,9 +31,18 @@ namespace gestor_tiendas_pw.dto
             }
             return tabla;
         }
+        public void dtUpdate_dat(string dat, string column, string table, string dat_where)
+        {
+            query = "UPDATE " + table + " SET " + column + "= " + dat + " WHERE " + dat_where;
+            SqlConnection conexion = new SqlConnection(conexionString);
+            conexion.Open();
+            SqlCommand comando = new SqlCommand(query, conexion);
+            comando.ExecuteNonQuery();
+
+        }
         public void dtUpdate(string dat, string column, string table, string id)
         {
-            query = "UPDATE " + table + " SET " + column + "= '" + dat + "' WHERE id=" + id;
+            query = "UPDATE " + table + " SET " + column + "= " + dat + " WHERE id=" + id;
             SqlConnection conexion = new SqlConnection(conexionString);
             conexion.Open();
             SqlCommand comando = new SqlCommand(query, conexion);
@@ -93,6 +102,24 @@ namespace gestor_tiendas_pw.dto
             }
             return respuesta = "creado";
         }
+        public void add_inventario(string nombre, string tienda, string cantidad) {
+            DataTable tabla = new DataTable();
+            query = "insert into inventario  values ('"+nombre+"', '"+tienda+"',"+cantidad+")";
+            SqlConnection conexion = new SqlConnection(conexionString);
+            conexion.Open();
+            SqlCommand comando = new SqlCommand(query, conexion);
+            comando.ExecuteNonQuery();
+        }
+        public void add_producto(string nombre) {
+            if(dat_exist("select * from producto where nombre= '" + nombre + "'")==false)
+            {
+                query = "insert into producto  values ('" + nombre + "')";
+                SqlConnection conexion = new SqlConnection(conexionString);
+                conexion.Open();
+                SqlCommand comando = new SqlCommand(query, conexion);
+                comando.ExecuteNonQuery();
+            }
+        }
         public void delete(string table, string id)
         {
             query = " DELETE FROM " + table + " WHERE " + "id= " + id;
@@ -127,6 +154,19 @@ namespace gestor_tiendas_pw.dto
             if (tabla.Rows.Count > 0) dat = true;
             else dat = false;
             return dat;
+        }
+
+        public DataSet drop(string select)
+        {
+            query = select;
+            DataTable tabla = new DataTable();
+            SqlConnection conexion = new SqlConnection(conexionString);
+            conexion.Open();
+            SqlCommand comando = new SqlCommand(query, conexion);
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            return ds;
         }
     }
 }

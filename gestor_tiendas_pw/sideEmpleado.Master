@@ -18,17 +18,17 @@
                     <asp:Label ID="lblUser" runat="server" class="badge badge-pill badge-info" Text="Algo"></asp:Label>
                 </li>
                 <li class="nav-item out_item">
-                    <asp:Button class="btn btn-secondary" ID="Button2" runat="server" Text="CERRAR SESIÓN" OnClick="Button2_Click"/>
+                    <asp:Button class="btn btn-secondary" ID="btn_close" runat="server" Text="CERRAR SESIÓN" OnClick="btn_close_Click"/>
                 </li>
             </ul>
             <aside id="lado">
                 <div>
                     <ul class="pl-0 pr-3 pt-3">
                         <li>
-                            <asp:Button class="btn btn-danger" ID="btn_home" runat="server" Text="INICIO" />
+                            <asp:Button class="btn btn-danger" ID="btn_home" runat="server" Text="INICIO" OnClick="btn_home_Click" />
                         </li>
                         <li class="pt-2">
-                            <asp:Button class="btn btn-danger" ID="btn_empleado" runat="server" Text="EMPLEADOS" />
+                            <asp:Button class="btn btn-danger" ID="btn_ventas" runat="server" Text="VENTAS" OnClick="Button2_Click" />
                         </li>
                     </ul>
                 </div>

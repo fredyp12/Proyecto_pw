@@ -42,13 +42,13 @@ namespace gestor_tiendas_pw
         protected global::System.Web.UI.WebControls.Label lblUser;
 
         /// <summary>
-        /// Control Button2.
+        /// Control btn_close.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btn_close;
 
         /// <summary>
         /// Control btn_home.
@@ -60,13 +60,13 @@ namespace gestor_tiendas_pw
         protected global::System.Web.UI.WebControls.Button btn_home;
 
         /// <summary>
-        /// Control btn_empleado.
+        /// Control btn_ventas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_empleado;
+        protected global::System.Web.UI.WebControls.Button btn_ventas;
 
         /// <summary>
         /// Control ContentPlaceHolder1.

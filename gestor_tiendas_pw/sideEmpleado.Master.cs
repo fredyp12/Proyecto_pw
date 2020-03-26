@@ -17,13 +17,23 @@ namespace gestor_tiendas_pw
             em.getNombre = Request.Params.Get("nombre");
             em.getuser = Request.Params.Get("user");
             em.getPass = Request.Params.Get("pass");
-            em.getTienda = int.Parse(Request.Params.Get("tienda"));
+            em.getTienda = Request.Params.Get("tienda");
             lblUser.Text = "Empleado / " + em.getNombre;
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            Response.Redirect("ventasEmpleado.aspx?nombre=" + em.getNombre + "&id=" + em.getId + "&user=" + em.getuser + "&tienda=" + em.getTienda);
+        }
+
+        protected void btn_close_Click(object sender, EventArgs e)
+        {
             Response.Redirect("login.aspx?");
+        }
+
+        protected void btn_home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("homeEmpleado.aspx?nombre=" + em.getNombre + "&id=" + em.getId + "&user=" + em.getuser + "&tienda=" + em.getTienda);
         }
     }
 }

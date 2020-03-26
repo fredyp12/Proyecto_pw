@@ -7,8 +7,8 @@ namespace gestor_tiendas_pw.dto
 {
     public class Empleado
     {
-        int id, tienda;
-        string nombre, user, pass;
+        int id;
+        string nombre, user, pass, tienda;
         public int getId
         {
             get
@@ -53,7 +53,7 @@ namespace gestor_tiendas_pw.dto
                 this.pass = value;
             }
         }
-        public int getTienda
+        public  string getTienda
         {
             get
             {

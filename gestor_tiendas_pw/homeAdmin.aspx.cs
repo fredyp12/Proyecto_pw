@@ -38,7 +38,7 @@ namespace gestor_tiendas_pw
             Db dataBase = new Db();   
             if(txt_nombre.Text!= ad.getNombre)
             {
-                dataBase.dtUpdate(txt_nombre.Text, "nombre", "administrador", Convert.ToString(ad.getId));
+                dataBase.dtUpdate("'"+txt_nombre.Text+"'", "nombre", "administrador", Convert.ToString(ad.getId));
                 ad.getNombre = txt_nombre.Text;
                 lbl_name.Text = ad.getNombre;
                 lblBienvenido.Text = ad.getNombre;
@@ -46,7 +46,7 @@ namespace gestor_tiendas_pw
             if (txt_pass.Text != "")
             {
                 if(txt_pass.Text==txt_passCopy.Text)
-                    dataBase.dtUpdate(txt_pass.Text, "pass", "administrador", Convert.ToString(ad.getId));
+                    dataBase.dtUpdate("'"+txt_pass.Text+"'", "pass", "administrador", Convert.ToString(ad.getId));
             }
             txt_pass.Text = "";
             txt_passCopy.Text = "";
