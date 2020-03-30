@@ -110,15 +110,46 @@ namespace gestor_tiendas_pw.dto
             SqlCommand comando = new SqlCommand(query, conexion);
             comando.ExecuteNonQuery();
         }
-        public void add_producto(string nombre) {
+        public void add_producto(string nombre, string precio, string dat) {
             if(dat_exist("select * from producto where nombre= '" + nombre + "'")==false)
             {
-                query = "insert into producto  values ('" + nombre + "')";
+                query = "insert into "+dat+"  values ('" + nombre + "',"+precio+")";
                 SqlConnection conexion = new SqlConnection(conexionString);
                 conexion.Open();
                 SqlCommand comando = new SqlCommand(query, conexion);
                 comando.ExecuteNonQuery();
             }
+        }
+        public void add_venta(string fecha,string producto, string empleado, string tienda, string cantidad)        {
+            int cat = int.Parse(cantidad), precio=0, pre_cantidad=0, cantidad_tienda=0,total_venta=0, id_inventario=0;
+            DataTable tabla = new DataTable();
+            DataTable tabla2 = new DataTable();
+            tabla = dtTable("select * from inventario where (producto='"+producto+"') and( tienda='"+tienda+"')");
+            tabla2 = dtTable("select * from producto where nombre='" + producto + "'");
+            DataRow row = tabla.Rows[0];
+            DataRow row2 = tabla2.Rows[0];
+            string string_cantidad = "", string_precio="", string_id="";
+            string_cantidad= Convert.ToString(row["cantidad"]);
+            string_precio= Convert.ToString(row2["precio"]);
+            string_id = Convert.ToString(row["id"]);
+            id_inventario = int.Parse(string_id);
+            precio = int.Parse(string_precio);
+            pre_cantidad = int.Parse(string_cantidad);
+            if (cat < pre_cantidad)
+            {
+                cantidad_tienda = pre_cantidad - cat;
+                total_venta = cat * precio;
+                /*Insert*/
+                query = "insert into venta values ('" + fecha + "','" + producto + "', '"+empleado+"', '"+tienda+"', "+cantidad+", "+total_venta+")";
+                SqlConnection conexion = new SqlConnection(conexionString);
+                conexion.Open();
+                SqlCommand comando = new SqlCommand(query, conexion);
+                comando.ExecuteNonQuery();
+                /*Update*/
+                dtUpdate(cantidad_tienda+"", "cantidad", "inventario",id_inventario+"");
+
+            }
+
         }
         public void delete(string table, string id)
         {

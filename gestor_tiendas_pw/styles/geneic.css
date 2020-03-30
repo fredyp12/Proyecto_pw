@@ -48,3 +48,15 @@ body {
 .label_group {
     position: absolute;
 }
+.title {
+    font-size: 21px;
+    color: #6c757d;
+    font-family: sans-serif;
+}
+-dropdown {
+    max-height: 30px;
+}
+.div_venta {
+    display: flex;
+    align-items: center;
+}
